@@ -22,3 +22,9 @@ malagu:
         certName: cert-3956618
         certificate: "${ env.SSL_PEM ?: 'ssl/www.cellbang.com.pem' }"
         privateKey: "${ env.SSL_KEY ?: 'ssl/www.cellbang.com.key' }"
+
+backend:
+  malagu:
+    cookies:
+      keys:
+        - "${env.COOKIES_KEY ?: 'abcdef'}"
